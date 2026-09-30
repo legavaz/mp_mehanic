@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Календарь</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CalendarField name="ДатаЗаявок" id="1">
+			<DataPath>ДатаЗаявок</DataPath>
+			<ContextMenu name="ДатаЗаявокКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаЗаявокРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ДатаИзменена</Event>
+			</Events>
+		</CalendarField>
+		<LabelDecoration name="ЗаголовокСписка" id="4">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки на выбранную дату</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЗаголовокСпискаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ЗаголовокСпискаРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<Table name="ЗаявкиНаДату" id="7">
+			<DataPath>ЗаявкиНаДату</DataPath>
+			<Height>14</Height>
+			<ContextMenu name="ЗаявкиНаДатуКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ЗаявкиНаДатуКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ЗаявкиНаДатуРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ЗаявкиНаДатуСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ЗаявкиНаДату</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаДатуСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ЗаявкиНаДатуСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаявкиНаДатуСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ЗаявкиНаДату</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаДатуСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЗаявкиНаДатуСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаявкиНаДатуУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ЗаявкиНаДату</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаДатуУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЗаявкиНаДатуУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Номер" id="20">
+					<DataPath>ЗаявкиНаДату.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="Статус" id="23">
+					<DataPath>ЗаявкиНаДату.Статус</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="Техника" id="26">
+					<DataPath>ЗаявкиНаДату.Техника</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Техника</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТехникаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТехникаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="Заказчик" id="29">
+					<DataPath>ЗаявкиНаДату.Заказчик</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказчик</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказчикКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗаказчикРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДатаЗаявок" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата заявок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаявкиНаДату" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявки на дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="34">
+					<Type>
+						<v8:Type>cfg:DocumentRef.мхЗаказНаряд</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номер" id="35">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="36">
+					<Type>
+						<v8:Type>cfg:EnumRef.мхСтатусыЗН</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Техника" id="37">
+					<Type>
+						<v8:Type>cfg:CatalogRef.мхТехника</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Заказчик" id="38">
+					<Type>
+						<v8:Type>cfg:CatalogRef.мхКонтрагенты</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>ИСТК Механики</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<LabelDecoration name="Шапка" id="1">
+			<TextColor>web:White</TextColor>
+			<Font faceName="Arial" height="22" bold="true" kind="Absolute" scale="100"/>
+			<BackColor>#0B2E5B</BackColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИСТК</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ШапкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<LabelDecoration name="Подзаголовок" id="4">
+			<TextColor>#0B2E5B</TextColor>
+			<Font faceName="Arial" height="12" italic="true" kind="Absolute" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильное приложение механика</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПодзаголовокКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПодзаголовокРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<Button name="КнопкаМоиЗаявки" id="7">
+			<CommandName>Form.Command.МоиЗаявки</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КнопкаМоиЗаявкиРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="КнопкаКалендарь" id="9">
+			<CommandName>Form.Command.Календарь</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КнопкаКалендарьРасширеннаяПодсказка" id="10"/>
+		</Button>
+		<Button name="КнопкаОтчёт" id="11">
+			<CommandName>Form.Command.Отчёт</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчёт по н/ч</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КнопкаОтчётРасширеннаяПодсказка" id="12"/>
+		</Button>
+		<Button name="КнопкаТехЛитература" id="13">
+			<CommandName>Form.Command.ТехЛитература</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тех. литература</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КнопкаТехЛитератураРасширеннаяПодсказка" id="14"/>
+		</Button>
+		<LabelDecoration name="Нехклауд" id="15">
+			<Hyperlink>true</Hyperlink>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на облачный сервер NEXCLOUD. Тех. библиотека</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НехклаудКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НехклаудРасширеннаяПодсказка" id="17"/>
+			<Events>
+				<Event name="Click">ОткрытьБиблиотеку</Event>
+			</Events>
+		</LabelDecoration>
+		<Button name="КнопкаПрофиль" id="18">
+			<CommandName>Form.Command.Профиль</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профиль</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="КнопкаПрофильРасширеннаяПодсказка" id="19"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="МоиЗаявки" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мои заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>МоиЗаявки</Action>
+		</Command>
+		<Command name="Календарь" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Календарь</Action>
+		</Command>
+		<Command name="Отчёт" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчёт</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отчёт</Action>
+		</Command>
+		<Command name="ТехЛитература" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тех литература</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ТехЛитература</Action>
+		</Command>
+		<Command name="Профиль" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профиль</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Профиль</Action>
+		</Command>
+	</Commands>
+</Form>
